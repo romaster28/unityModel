@@ -28,7 +28,7 @@ public class TransformModel
     public Vector3 Position
     {
         get => _position;
-        private set
+        set
         {
             _position = value;
             PositionUpdated?.Invoke(value);
@@ -38,7 +38,7 @@ public class TransformModel
     public Quaternion Rotation
     {
         get => _rotation;
-        private set
+        set
         {
             _rotation = value;
             RotationUpdated?.Invoke(value);
@@ -48,7 +48,7 @@ public class TransformModel
     public Vector3 Scale
     {
         get => _scale;
-        private set
+        set
         {
             _scale = value;
             ScaleUpdated?.Invoke(value);
