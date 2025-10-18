@@ -1,7 +1,7 @@
 ﻿using System;
 using UnityEngine;
 
-public class TransformModel
+public class TransformModel : IReadOnlyTransform
 {
     private Vector3 _position;
     private Quaternion _rotation;
@@ -54,6 +54,8 @@ public class TransformModel
             ScaleUpdated?.Invoke(value);
         }
     }
+
+    public Vector3 Forward => _rotation * Vector3.forward;
 
     public event Action<Vector3> PositionUpdated;
     public event Action<Quaternion> RotationUpdated;
