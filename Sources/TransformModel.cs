@@ -5,7 +5,7 @@ public class TransformModel : IReadOnlyTransform
 {
     private Vector3 _position;
     private Quaternion _rotation;
-    private Vector3 _scale;
+    private Vector3 _scale = Vector3.one;
 
     public TransformModel(Vector3 position)
     {
